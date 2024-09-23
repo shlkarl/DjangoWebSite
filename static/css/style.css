@@ -1,0 +1,68 @@
+﻿a {
+    font-family: SimSun;
+    text-decoration: double;
+    color: mediumvioletred;
+    animation-name: slidein;
+    display: inline-block; /* Строчно-блочный элемент */
+    border: 2px solid #ff0000;
+    margin: 10px 30px;
+    background: #ff5200; /* Серый цвет фона */
+    border-radius: 500px; /* Скругляем уголки */
+}
+h2 {
+    animation-duration: 3s;
+    animation-name: slidein;
+    color: #5000b4;
+    padding: 20px;
+    margin: 10px;
+}
+
+img {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
+
+body {
+    font-weight: bold;
+animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+    font-style: italic;
+}
+.button {
+    margin: 10px;
+    background-color: orangered;
+    border: none;
+    color: mediumvioletred;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    display: flex;
+}
+li {
+    color: orangered;
+}
+
+#time-node {
+    background: orangered;
+    color: #5000b4;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 50px;
+    border-radius: 4px;
+    width: 500px;
+    text-align: center;
+}
+
