@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ООО "СОФТ АЛЬФА"</title>
+    <link href="{% static 'images\1.ico' %}" rel="shortcut icon">
+    <script src="{% static 'js\Scr.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css\style.css' %}" type="text/css">
+</head>
+<body link="ff0000" vlink="ff0000">
+    <table cellpadding="0" cellspacing="0" border="0" align="center">
+        <tr>
+            <td><img src="{% static 'images\1c.jpeg' %}" width="330" height="150"></td>
+            <td><img src="{% static 'images\sa1.png' %}" width="330" height="150"></td>
+            <td align="center"><a href="about"><h2>О компании</h2></a></td>
+            <td><h2>Эл.адресс</h2><h3>mail@soft-alpha.ru</h3></td>
+            <td><a href="contact"><h2>Телефон</h2></a><h3>+7(938)401-91-49</h3></td>
+            <td><h2>Поиск</h2><input type="text"></td>
+        </tr>
+        <tr bgcolor="5000b4">
+            <td width="100px"><a href="server"><h2>Размещение на сервере</h2></a></td>
+            <td width="100px" align="right">
+                <a href="product"><h2>Програмные продукты</h2></a>
+                <button class="button" onclick="showprod()">>>></button>
+                <div id="1" style="display: none;">
+                    <ul>
+                        <li>1C: Бухгалтерия</li>
+                        <li>1C: Зарплата и управление персоналом</li>
+                        <li>1C: Управление торговлей</li>
+                        <li>1C: Розница</li>
+                    </ul>
+                </div>
+            </td>
+            <td align="center">
+                <a href="uslugi"><h2>Услуги</h2></a>
+                <button class="button" onclick="showus()">>>></button>
+                <div id="2" style="display: none;">
+                    <ul>
+                        <li>Сопровождение 1С с учетом фактически отработанного веремени</li>
+                        <li>Сопровождение 1С с абонентской платой</li>
+                        <li>Доработка типовых решений под требования пользователей</li>
+                    </ul>
+                </div>
+            </td>
+            <td>
+                <a href="service"><h2>Сервисы 1С</h2></a>
+                <button class="button" onclick="showser()">>>></button>
+                <div id="3" style="display: none;">
+                    <ul>
+                        <li>1C-Отчетность</li>
+                        <li>1С-ЭДО</li>
+                        <li>1C: Контрагент</li>
+                        <li>1CПАРК Риски</li>
+                        <li>1C: Распознование первичных документов</li>
+                    </ul>
+                </div>
+            </td>
+            <td colspan="2"><h2>1C ИТС</h2></td>
+        </tr>
+        <tr>
+            <td colspan="6"><hr><h3>Главная > 1C ИТС > ...</h3><div id="time-node"></div><hr /></td>
+        </tr>
+        <tr align="center" height="250px">
+            <td colspan="6" width="2000px"><h3 style="background-color: white; display: inline-block; background: #262357b2; border-radius: 500px; ">Описание сервиса</h3></td>
+        </tr>
+        <tr align="center" height="500px" background="{% static 'images\fon.png' %}">
+            <td colspan="6" width="2000px">
+                <table cellpadding="80" cellspacing="80" border="0">
+                    <tr style="background: #262357b2; border-radius: 500px;" height="100px">
+                        <td width="30%" align="center"><h2 style="background-color: white; display: inline-block; background: #262357b2; border-radius: 500px; ">Базовый</h2></a></td>
+                        <td width="30%" align="center"><h2 style="background-color: white; display: inline-block; background: #262357b2; border-radius: 500px; ">ПРОФ</h2></a></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr align="left" background="{% static 'images\image.png' %}">
+            <td><img src="{% static 'images\sa1.png' %}" width="230" height="90"></td>
+            <td><a href="server"><h4>Размещение на сервере</h4></a><a href="uslugi.html"><h4>Услуги</h4></a></td>
+            <td><a href="product"><h4>Програмные продукты</h4></a><a href="service"><h4>Сервисы 1С</h4></a></td>
+            <td colspan="3"><h4>Телефон: +7(938)401-91-49</h4><h4>mail@soft-alpha.ru</h4></td>
+        </tr>
+    </table>
+    <script>
+        var timeNode = document.getElementById('time-node');
+
+        function getCurrentTimeString() {
+            return new Date().toTimeString().replace(/ .*/, '');
+        }
+
+        setInterval(
+            () => timeNode.innerHTML = getCurrentTimeString(),
+            1000
+        );
+    </script>
+</body>
+</html>
